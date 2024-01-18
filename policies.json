@@ -1,0 +1,31 @@
+{
+  "policies": [
+    {
+      "health": [
+        "healthpolicy1",
+        "healthpolicy2",
+        "healthpolicy3",
+        "healthpolicy4",
+        "healthpolicy5"
+      ]
+    },
+    {
+      "life": [
+        "lifepolicy1",
+        "lifepolicy2",
+        "lifepolicy3",
+        "lifepolicy4",
+        "lifepolicy5"
+      ]
+    },
+    {
+      "gadgets": [
+        "gadgetpolicy1",
+        "gadgetspolicy2",
+        "gadgetspolicy3",
+        "gadgetspolicy4",
+        "gadgetspolicy5"
+      ]
+    }
+  ]
+}

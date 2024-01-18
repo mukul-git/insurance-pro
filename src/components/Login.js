@@ -11,6 +11,7 @@ import {
 import Header from "./Header";
 import { auth } from "../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import LoginDetails from "./LoginDetails";
 // import "../firebaseConfig"; // Add this line prevent firebase not loading error
 // import { getFirestore, addDoc, collection } from "firebase/firestore";
 
@@ -51,6 +52,7 @@ const LoginForm = () => {
   return (
     <>
       <Header />
+      <LoginDetails />
       <Container>
         <Row className="justify-content-md-center mt-5">
           <Col xs={12} md={6}>

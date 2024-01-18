@@ -1,0 +1,25 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Cozy Apartment",
+      "price": 120000,
+      "bedrooms": 2,
+      "bathrooms": 1
+    },
+    {
+      "id": 2,
+      "title": "Modern House",
+      "price": 300000,
+      "bedrooms": 4,
+      "bathrooms": 2
+    },
+    {
+      "id": 3,
+      "title": "Luxury Villa",
+      "price": 700000,
+      "bedrooms": 5,
+      "bathrooms": 4
+    }
+  ]
+}

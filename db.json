@@ -1,0 +1,40 @@
+{
+  "policies": [
+    {
+      "insurance policy data": {
+        "policyNumber": "",
+        "policyHolderName": "",
+        "coverageType": "",
+        "premiumAmount": 0.0,
+        "policyStartDate": "",
+        "policyEndDate": "",
+        "insuredItems": [],
+        "policyStatus": ""
+      }
+    },
+    {
+      "insurance claim data": {
+        "claimNumber": "",
+        "customerId": "",
+        "policyNumber": "",
+        "claimantName": "",
+        "claimDate": "",
+        "claimAmount": 0.0,
+        "claimStatus": "",
+        "incidentDetails": "",
+        "documentsSubmitted": []
+      }
+    },
+    {
+      "customer data": {
+        "customerId": "",
+        "customerName": "",
+        "contactNumber": "",
+        "email": "",
+        "address": "",
+        "policiesHeld": [],
+        "claimsHistory": []
+      }
+    }
+  ]
+}
