@@ -1,31 +1,78 @@
 {
-  "policies": [
-    {
-      "health": [
-        "healthpolicy1",
-        "healthpolicy2",
-        "healthpolicy3",
-        "healthpolicy4",
-        "healthpolicy5"
-      ]
-    },
-    {
-      "life": [
-        "lifepolicy1",
-        "lifepolicy2",
-        "lifepolicy3",
-        "lifepolicy4",
-        "lifepolicy5"
-      ]
-    },
-    {
-      "gadgets": [
-        "gadgetpolicy1",
-        "gadgetspolicy2",
-        "gadgetspolicy3",
-        "gadgetspolicy4",
-        "gadgetspolicy5"
-      ]
-    }
-  ]
+  "policies": {
+    "type": [
+      {
+        "health": [
+          {
+            "title": "health policy1",
+            "discription": "This is health policy 1",
+            "category": "term"
+          },
+          {
+            "title": "health policy2",
+            "discription": "This is health policy 2",
+            "category": "whole"
+          },
+          {
+            "title": "health policy3",
+            "discription": "This is health policy 3",
+            "category": "universal"
+          },
+          {
+            "title": "health policy4",
+            "discription": "This is health policy 4",
+            "category": "term"
+          }
+        ]
+      },
+      {
+        "life": [
+          {
+            "title": "life policy1",
+            "discription": "This is life policy 1",
+            "category": "individual"
+          },
+          {
+            "title": "life policy1",
+            "discription": "This is life policy 2",
+            "category": "family"
+          },
+          {
+            "title": "life policy1",
+            "discription": "This is life policy 3",
+            "category": "group"
+          },
+          {
+            "title": "life policy1",
+            "discription": "This is life policy 4",
+            "category": "family"
+          }
+        ]
+      },
+      {
+        "property": [
+          {
+            "title": "property policy1",
+            "discription": "This is property policy 1",
+            "category": "homeowners"
+          },
+          {
+            "title": "property policy1",
+            "discription": "This is property policy 2",
+            "category": "renters"
+          },
+          {
+            "title": "property policy1",
+            "discription": "This is property policy 3",
+            "category": "flood"
+          },
+          {
+            "title": "property policy1",
+            "discription": "This is property policy 4",
+            "category": "flood"
+          }
+        ]
+      }
+    ]
+  }
 }
