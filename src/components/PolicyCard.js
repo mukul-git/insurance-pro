@@ -55,7 +55,7 @@ const PolicyCard = () => {
       </div>
       {data?.type?.map((policyType, policyIndex) => {
         return (
-          <Row className="justify-content-center">
+          <Row key={policyIndex} className="justify-content-center">
             {policyType.health &&
               policyType.health.length > 0 &&
               policyType?.health?.map((elem, index) => {
