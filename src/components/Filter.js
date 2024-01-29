@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Dropdown } from "@mui/base/Dropdown";
 import { MenuButton } from "@mui/base/MenuButton";
 import { MenuItem } from "@mui/base/MenuItem";
@@ -83,17 +83,21 @@ const policiesList = {
   },
 };
 
-// const policiesJson = JSON.parse(policiesList);
-
 const Filter = () => {
   const [lifeList, setLifeList] = useState([]);
+
   const filterByLifeType = (data) => {
     const filteredLifeTypeList = policiesList.policies.type.filter(
       (type) => type.life
     );
     return filteredLifeTypeList;
   };
-  setLifeList(filterByLifeType(policiesList));
+
+  useEffect(() => {
+    const lifePoliciesList = filterByLifeType(policiesList);
+    setLifeList(lifePoliciesList);
+  }, [setLifeList]);
+
   const filterByHealthType = () => {};
   const filterByPropertyType = () => {};
   return (

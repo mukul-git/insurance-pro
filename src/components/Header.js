@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from "react-bootstrap";
 import { auth } from "../firebaseConfig";
 import Filter from "./Filter";
-// import { Link } from "react-router-dom";
 
 const Header = () => {
   const logoutHandle = (auth) => {

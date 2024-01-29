@@ -1,4 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchDataStart,
+  fetchDataSuccess,
+  fetchDataError,
+} from "../redux/slice";
 import {
   Card,
   CardBody,
@@ -11,17 +17,30 @@ import {
 } from "react-bootstrap";
 
 const PolicyCard = () => {
-  const [policies, setPolicies] = useState({});
+  const dispatch = useDispatch();
+  const { data, loading, error } = useSelector((state) => state.data);
+
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch("http://localhost:3001/policies");
-      const dataJson = await data.json();
-      setPolicies(dataJson);
-      console.log(dataJson);
+      dispatch(fetchDataStart());
+      try {
+        const response = await fetch("http://localhost:3001/policies");
+        const result = await response.json();
+
+        dispatch(fetchDataSuccess(result));
+      } catch (error) {
+        dispatch(fetchDataError(error));
+      }
     };
     fetchData();
-    // console.log(policies);
-  }, []);
+  }, [dispatch]);
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
   return (
     <div>
       <div
@@ -34,7 +53,7 @@ const PolicyCard = () => {
       >
         Featured Policies
       </div>
-      {policies?.type?.map((policyType, policyIndex) => {
+      {data?.type?.map((policyType, policyIndex) => {
         return (
           <Row className="justify-content-center">
             {policyType.health &&
@@ -51,9 +70,10 @@ const PolicyCard = () => {
                       <img alt="Sample" src="https://picsum.photos/300/200" />
                       <CardBody>
                         <CardTitle tag="h5">{elem.title}</CardTitle>
-                        <CardSubtitle className="mb-2 text-muted" tag="h6">
-                          {/* Card subtitle */}
-                        </CardSubtitle>
+                        <CardSubtitle
+                          className="mb-2 text-muted"
+                          tag="h6"
+                        ></CardSubtitle>
                         <CardText>{elem.description}</CardText>
                         <Button>Button</Button>
                       </CardBody>
@@ -75,9 +95,10 @@ const PolicyCard = () => {
                       <img alt="Sample" src="https://picsum.photos/300/200" />
                       <CardBody>
                         <CardTitle tag="h5">{elem.title}</CardTitle>
-                        <CardSubtitle className="mb-2 text-muted" tag="h6">
-                          {/* Card subtitle */}
-                        </CardSubtitle>
+                        <CardSubtitle
+                          className="mb-2 text-muted"
+                          tag="h6"
+                        ></CardSubtitle>
                         <CardText>{elem.description}</CardText>
                         <Button>Button</Button>
                       </CardBody>
@@ -99,9 +120,10 @@ const PolicyCard = () => {
                       <img alt="Sample" src="https://picsum.photos/300/200" />
                       <CardBody>
                         <CardTitle tag="h5">{elem.title}</CardTitle>
-                        <CardSubtitle className="mb-2 text-muted" tag="h6">
-                          {/* Card subtitle */}
-                        </CardSubtitle>
+                        <CardSubtitle
+                          className="mb-2 text-muted"
+                          tag="h6"
+                        ></CardSubtitle>
                         <CardText>{elem.description}</CardText>
                         <Button>Button</Button>
                       </CardBody>

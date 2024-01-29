@@ -8,7 +8,6 @@ import {
   Form as BootstrapForm,
   Button,
 } from "react-bootstrap";
-import Header from "./Header";
 import { auth } from "../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import LoginDetails from "./LoginDetails";
@@ -51,7 +50,6 @@ const LoginForm = () => {
 
   return (
     <>
-      <Header />
       <LoginDetails />
       <Container>
         <Row className="justify-content-md-center mt-5">

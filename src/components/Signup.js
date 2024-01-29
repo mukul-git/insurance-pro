@@ -7,7 +7,6 @@ import {
   Form as BootstrapForm,
   Button,
 } from "react-bootstrap";
-import Header from "./Header";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 
@@ -30,7 +29,6 @@ const submitForSignup = async (values, { setSubmitting }) => {
 const SignUp = () => {
   return (
     <>
-      <Header />
       <Container>
         <Row className="justify-content-md-center mt-5">
           <Col xs={12} md={6}>
